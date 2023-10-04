@@ -1,0 +1,51 @@
+1) "  Çağatay Yıldız" isimli metindeki boşlukları kaldır.    (REPLACE)
+2) "cagatay yildiz" kelimesindeki boşlukları temizle ve tüm harfleri büyült ( REPLACE ve UPPER)
+3) "******Çağatay Yıldız" isimli metindeki yıldızları kaldır (REPLACE)
+4) "Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap (REPLACE)
+5) "**Tech Career**" isimli metindeki yıldızları kaldır (REPLACE)
+6) "Tech Career" isimli metnin soluna ve sağına 3 yıldız koy. "***Tech Career***" ( Normal toplama operatörü)
+7) "Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült (SUBSTRING)
+8) "Tech bilişim" kelimelerin ilk harflerini büyült (Substring ve upper)
+
+
+
+var user1 = "  Çağatay Yıldız";
+var user2 = user1.replaceAll(" ", "")
+console.log("answer-3:" + " " + user2)
+
+
+var user3 = "cagatay yildiz";
+var user4 = user3.replace(" ","").toUpperCase()
+console.log("answer-2:" + " " + user4)
+
+
+var user5 = "******Çağatay Yıldız";
+var user6 = user5.replaceAll("*", "");
+console.log("answer-3:" + " " + user6)
+
+
+var user7 = "Çağatay  Yıldız";
+var user8 = user7.replace(" ", "")
+console.log("answer-4:" + " " + user8)
+
+
+var user9 = "**Tech Career**";
+var user10 = user9.replaceAll("*", "")
+console.log("answer-5:" + " " + user10)
+
+
+var user11 = "Tech Career";
+var user12 = "***" + user11 + "***"
+console.log("answer-6:" + " " + user12)
+
+
+var user13 = "Tech Career Bilişim teknolojileri";
+var user14 = user13.substring(user13.indexOf("T"), user13.indexOf("t")) + user13.substring(user13.indexOf("t")).toUpperCase()
+console.log("answer-7:" + " " + user14)
+
+
+var user15 = "Tech bilişim";
+var user16 = user15.substring(user15.indexOf("T"),user15.indexOf("b")) + user15.substring(user15.indexOf("b"),user15.indexOf("i")).toUpperCase() + user15.substring(user15.indexOf("i"),user15.indexOf("m")+1)
+console.log("answer-8:" + " " + user16)
+
+

@@ -1,0 +1,80 @@
+
+//"Tech Career" metnini tersten yazdır
+
+var mtn = "Tech Career";
+var empty= ""
+for( var i = mtn.lastIndexOf("r"); i > mtn.indexOf("T")-1; i--){
+	empty += mtn[i]
+}
+
+console.log(empty)
+
+
+-----------------
+
+// var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz.
+
+var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+
+var empty = [];
+
+var a = numbers.forEach(num => {
+	if(num > 0){
+		empty.push(num)
+	}
+})
+
+
+const sum = empty.reduce((acc, user) => {
+	let a = acc + user;
+	return a
+},0)
+
+console.log(sum)
+
+
+------------------
+
+// var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+
+var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+
+var max = numbers[0];
+
+for(var i = 0; i<numbers.length; i++){
+	if(numbers[i] > max){
+		max = numbers[i]
+	}
+}
+
+console.log(max)
+
+
+
+-----------------
+
+//1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
+
+
+empty = []
+
+for(i = 1; i<51; i++){
+	if(i%3 === 0 || i%5 === 0){
+		empty.push(i);
+		console.log(i)
+	}
+}
+
+console.log("piece of numbers divisible by 3 and 5: " + empty.length)
+
+
+
+
+
+
+
+
+
+
+
+
